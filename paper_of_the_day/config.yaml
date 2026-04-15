@@ -1,19 +1,30 @@
 arxiv_categories:
+  - cs.RO   # Robotics — primary home for VLA, robot learning, manipulation
   - cs.AI
   - cs.LG
+  - cs.CV   # Computer Vision — cross-listed robot perception papers land here
   - cs.CL
 
 # Free-text description of your research interests. Used to rank papers by personal relevance.
-# Example: "I work on efficient fine-tuning of LLMs and interpretability of transformer attention."
 interests: "Vision-Language-Action Models, Robotics, Robot Learning, Computer Vision, Machine Learning for Molecular Forcefields, Machine Learning for Molecular Dynamics"
 
-keywords_prioritize: [VLA, Robotics, Robot Learning, Computer Vision, Trace, Molecular Forcefields, Molecular Dynamics]
+keywords_prioritize:
+  - VLA
+  - vision-language-action
+  - robot learning
+  - robot manipulation
+  - humanoid
+  - molecular forcefield
+  - molecular dynamics
+  - force field
+  - MLFF
+  - computer vision
 
 keywords_deprioritize: []
 
 # How many candidate papers to evaluate before picking the top one.
 # Higher values improve coverage but increase search time.
-max_candidates: 10
+max_candidates: 20
 
 # Boost papers that release code (GitHub link in abstract or comments).
 prioritize_with_code: true
