@@ -6,7 +6,9 @@ Surface the single most notable AI/ML paper from the last 24 hours.
 
 1. **Read** `config.yaml`: `arxiv_categories`, `interests`, `keywords_prioritize`, `keywords_deprioritize`, `max_candidates`, `prioritize_with_code`, `output_format`.
 
-2. **Fetch papers in one request.** Call Semantic Scholar with all `keywords_prioritize` joined by spaces, date-bounded to the last 3 days — this returns titles + abstracts in a single JSON response, no follow-up fetches needed:
+2. **Fetch papers — two requests total:**
+
+   **Request 1 — candidates:** Call Semantic Scholar with `keywords_prioritize` joined by spaces, date-bounded to the last 3 days:
    ```
    GET https://api.semanticscholar.org/graph/v1/paper/search
      ?query=<keywords_prioritize joined with spaces>
@@ -14,7 +16,9 @@ Surface the single most notable AI/ML paper from the last 24 hours.
      &limit=<max_candidates>
      &publicationDateOrYear=<TODAY-3d>:<TODAY>
    ```
-   If that call fails: fetch ONE arXiv RSS feed for the first category only — `https://rss.arxiv.org/rss/<first_category>`. Do not use WebSearch.
+   If this call fails, fetch ONE arXiv RSS feed instead: `https://rss.arxiv.org/rss/<first_category>`.
+
+   **Request 2 — trending signal:** WebSearch `site:huggingface.co/papers trending <TODAY>`. Note which arXiv IDs appear — boost those papers in ranking. (HuggingFace's website and API are blocked by Cloudflare bot protection and cannot be fetched directly.)
 
 3. **Rank**: boost `keywords_prioritize` matches and `interests` alignment; penalize `keywords_deprioritize`; boost code links if `prioritize_with_code`; then rank by novelty, result clarity, and impact.
 
