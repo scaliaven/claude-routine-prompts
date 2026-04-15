@@ -41,7 +41,7 @@ Searches arXiv for papers published in the last 24 hours, filters by configured 
 claude --print --effort low < paper_of_the_day/prompt.md
 ```
 
-- `--effort low` — reduces model thoroughness; sufficient for a focused search-and-summarise task, and keeps token usage around 7,000–9,000 tokens (~16–20% of a Pro 5-hour window).
+- `--effort low` — reduces model thoroughness; sufficient for a focused search-and-summarise task, and keeps token usage around 4,500–6,500 tokens (~10–15% of a Pro 5-hour window).
 - `--max-budget-usd` — only relevant if you are on an **API key (pay-per-token)** plan, not Claude Pro. Pro users have a token quota per 5-hour rolling window instead.
 
 Or schedule it via Claude Code:

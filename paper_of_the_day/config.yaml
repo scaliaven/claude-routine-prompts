@@ -1,4 +1,4 @@
-# Estimated token usage per run: ~7,000–9,000 tokens (~16–20% of a Claude Pro 5-hour window).
+# Estimated token usage per run: ~4,500–6,500 tokens (~10–15% of a Claude Pro 5-hour window).
 # Recommended invocation: claude --print --effort low < paper_of_the_day/prompt.md
 # Note: --max-budget-usd is only for API key (pay-per-token) plans, not Claude Pro.
 
