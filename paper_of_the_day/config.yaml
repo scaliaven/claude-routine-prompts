@@ -1,3 +1,7 @@
+# Maximum API spend per run. Pass this value to --max-budget-usd when invoking:
+#   claude --print --max-budget-usd 0.10 --effort low < paper_of_the_day/prompt.md
+max_budget_usd: 0.10
+
 arxiv_categories:
   - cs.RO   # Robotics — primary home for VLA, robot learning, manipulation
   - cs.LG

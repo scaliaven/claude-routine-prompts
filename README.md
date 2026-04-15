@@ -38,8 +38,11 @@ Searches arXiv for papers published in the last 24 hours, filters by configured 
 
 **How to run:**
 ```bash
-claude --print < paper_of_the_day/prompt.md
+claude --print --max-budget-usd 0.10 --effort low < paper_of_the_day/prompt.md
 ```
+
+- `--max-budget-usd` — hard-stops the run if API spend exceeds this amount. Set to match the `max_budget_usd` value in `config.yaml`.
+- `--effort low` — reduces model thoroughness; sufficient for a focused search-and-summarise task.
 
 Or schedule it via Claude Code:
 ```
