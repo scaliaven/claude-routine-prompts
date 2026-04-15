@@ -31,10 +31,13 @@ Searches arXiv for papers published in the last 24 hours, filters by configured 
 
 | Key | Type | Description |
 |---|---|---|
-| `arxiv_categories` | list of strings | arXiv category codes to search (e.g. `cs.AI`, `cs.LG`) |
-| `keywords_prioritize` | list of strings | Prefer papers containing these terms |
-| `keywords_deprioritize` | list of strings | Down-rank papers containing these terms |
-| `output_format` | list of strings | Fields to include in the output, in order |
+| `interests` | string | Free-text research interests used for ranking |
+| `keywords_prioritize` | list | Boost papers containing these terms; top 4 also drive the arXiv search query |
+| `keywords_deprioritize` | list | Down-rank papers containing these terms |
+| `prioritize_with_code` | bool | Include Papers With Code in the community signal search |
+| `output_format` | list | Fields to include in output, in order |
+
+**Token cost:** ~4,500–6,500 tokens per run (~10–15% of a Claude Pro 5-hour window). On API key plans, add `--max-budget-usd 0.05`.
 
 **How to run:**
 ```bash
