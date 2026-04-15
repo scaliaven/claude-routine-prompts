@@ -1,6 +1,6 @@
-interests: ""  # e.g. "I work on efficient LLM fine-tuning and mechanistic interpretability"
+interests: "Vision-Language-Action Models, Robotics, Robot Learning, Computer Vision, ML for Molecular Forcefields and Dynamics"
 
-keywords_prioritize: []  # e.g. [transformer, RLHF, diffusion]
+keywords_prioritize: [VLA, robot learning, humanoid, molecular dynamics, MLFF, computer vision]
 
 keywords_deprioritize: []
 
